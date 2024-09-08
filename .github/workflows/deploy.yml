@@ -24,6 +24,7 @@ jobs:
       - name: Build the JupyterLite site
         run: |
           jupyter lite build --contents week-1 --output-dir dist/week-1
+          cp -r home/* .
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
